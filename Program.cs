@@ -39,6 +39,8 @@ double rate_5 = 0.35;
 
 bool On = true;
 
+
+Console.WriteLine("Please enter your name: ")
 string name = Console.ReadLine();
 
 Welcome();
