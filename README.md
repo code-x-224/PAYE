@@ -50,6 +50,6 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Acknowledgments
 
-We extend our sincere appreciation to the developers ( karisacodes,WacoderForever, s1gm9) and contributors (G-CoderX, Stephanie Makori, Voste254, Nyabs254, 123Origami) who have generously contributed to enhancing this tax calculator.
+We extend our sincere appreciation to the developers ( karisacodes,s1gm9,WacoderForever) and contributors (G-CoderX, Stephanie Makori, Voste254, Nyabs254, 123Origami) who have generously contributed to enhancing this tax calculator.
 
 
