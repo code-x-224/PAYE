@@ -4,6 +4,29 @@
 
 The Code_X Tax Calculator is a C# console application designed to calculate income tax based on user-provided monthly salary, allowances, and deductions. It utilizes a progressive tax rate structure with different tax brackets.
 
+
+## Member details
+
+Stephanie Makori -S13/07829/22
+
+Sally Munga -S13/07782/22
+
+Sylvia Anyango-S13/10620/22
+
+Gilbert Omindeh - S13/07816/22
+
+Emmanuel Magothe - S13/07775/22
+
+Stephen Onyango- S13/07841/22
+
+Daniel Amani Karisa- S13/07763/22
+
+Seth Omondi - S13/04402/21
+
+Samuel Mathews - S13/07776/22
+
+Halkano Liban - S13/07771/22
+
 ## Getting Started
 
 ## User Guide
