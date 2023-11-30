@@ -6,6 +6,10 @@ The Code_X Tax Calculator is a C# console application designed to calculate inco
 
 ## Getting Started
 
+## User Guide
+
+The user guide is a video that helps the user get started with the application.
+
 ### Prerequisites
 
 - .NET SDK installed on your machine.
