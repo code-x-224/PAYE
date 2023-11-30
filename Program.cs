@@ -39,10 +39,21 @@ double rate_5 = 0.35;
 
 bool On = true;
 
+string taxComplianceStatus = "Approved";
 
-Console.WriteLine("Please enter your name: ")
-string name = Console.ReadLine();
+Welcome();
 
+Console.WriteLine("Enter your name: \v");
+string taxpayerName = Console.ReadLine();
+
+Console.Clear();
+Welcome();
+
+Console.WriteLine("Enter Your Tax ID:\v");
+string taxpayerId = Console.ReadLine();
+
+
+Console.Clear();
 Welcome();
 
 // USER INPUTS
@@ -53,10 +64,10 @@ Welcome();
 string prompt_1 = "\vEnter your monthly salary:";
 string promt_2 = "\v> ";
 
-    Console.Write(prompt_1 + promt_2);
+Console.Write(prompt_1 + promt_2);
 while (On)
 {
-    string try_again = "\vTry again: "; 
+    string try_again = "\vTry again: ";
 
     try
     {
@@ -72,7 +83,7 @@ while (On)
 
         allowance = Convert.ToDouble(Console.ReadLine());
         bool loop_on = true;
-        while (allAccounted  )
+        while (allAccounted)
         {
             Console.Clear();
             Thread.Sleep(500);
@@ -182,6 +193,8 @@ while (On)
                 CalculationWait();
                 Console.WriteLine($"Hello, you are to pay Ksh{tax_payable:C2}.Good day!!");
                 net_income(taxable_income, deduction, tax_payable);
+                TaxComplianceDisplay(taxpayerName, taxpayerId, monthly_income, tax_payable, taxComplianceStatus);
+
             }
 
             if (taxable_income > upper_lim_4 && taxable_income <= upper_lim_5)
@@ -195,6 +208,8 @@ while (On)
                     CalculationWait();
                     Console.WriteLine($"Hello, you are to pay Ksh{tax_payable:C2}.Good day!!");
                     net_income(taxable_income, deduction, tax_payable);
+                    TaxComplianceDisplay(taxpayerName, taxpayerId, monthly_income, tax_payable, taxComplianceStatus);
+
                 }
                 else
                 {
@@ -203,6 +218,8 @@ while (On)
                     CalculationWait();
                     Console.WriteLine($"Hello, you are to pay Ksh{tax_payable:C2}.Good day!!");
                     net_income(taxable_income, deduction, tax_payable);
+                    TaxComplianceDisplay(taxpayerName, taxpayerId, monthly_income, tax_payable, taxComplianceStatus);
+
                 }
             }
 
@@ -217,6 +234,8 @@ while (On)
                     CalculationWait();
                     Console.WriteLine($"Hello, you are to pay Ksh{tax_payable:C2}.Good day!!");
                     net_income(taxable_income, deduction, tax_payable);
+                    TaxComplianceDisplay(taxpayerName, taxpayerId, monthly_income, tax_payable, taxComplianceStatus);
+
                 }
                 else
                 {
@@ -225,6 +244,8 @@ while (On)
                     CalculationWait();
                     Console.WriteLine($"Hello, you are to pay Ksh{tax_payable:C2}.Good day!!");
                     net_income(taxable_income, deduction, tax_payable);
+                    TaxComplianceDisplay(taxpayerName, taxpayerId, monthly_income, tax_payable, taxComplianceStatus);
+
                 }
             }
 
@@ -237,6 +258,8 @@ while (On)
                     CalculationWait();
                     Console.WriteLine($"Hello, you are to pay Ksh{tax_payable:C2}.Good day!!");
                     net_income(taxable_income, deduction, tax_payable);
+                    TaxComplianceDisplay(taxpayerName, taxpayerId, monthly_income, tax_payable, taxComplianceStatus);
+
                 }
                 else
                 {
@@ -244,6 +267,8 @@ while (On)
                     CalculationWait();
                     Console.WriteLine($"Hello, you are to pay Ksh{tax_payable:C2}.Good day!!");
                     net_income(taxable_income, deduction, tax_payable);
+                    TaxComplianceDisplay(taxpayerName, taxpayerId, monthly_income, tax_payable, taxComplianceStatus);
+
                 }
 
             }
@@ -257,6 +282,8 @@ while (On)
                     CalculationWait();
                     Console.WriteLine($"Hello, you are to pay Ksh{tax_payable:C2}.Good day!!");
                     net_income(taxable_income, deduction, tax_payable);
+                    TaxComplianceDisplay(taxpayerName, taxpayerId, monthly_income, tax_payable, taxComplianceStatus);
+
                 }
                 else
                 {
@@ -264,6 +291,8 @@ while (On)
                     CalculationWait();
                     Console.WriteLine($"Hello, you are to pay Ksh{tax_payable:C2}.Good day!!");
                     net_income(taxable_income, deduction, tax_payable);
+                    TaxComplianceDisplay(taxpayerName, taxpayerId, monthly_income, tax_payable, taxComplianceStatus);
+
                 }
             }
 
@@ -276,6 +305,8 @@ while (On)
                     CalculationWait();
                     Console.WriteLine($"Hello, you are to pay Ksh{tax_payable:C2}.Good day!!");
                     net_income(taxable_income, deduction, tax_payable);
+                    TaxComplianceDisplay(taxpayerName, taxpayerId, monthly_income, tax_payable, taxComplianceStatus);
+
                 }
 
                 else
@@ -284,6 +315,8 @@ while (On)
                     CalculationWait();
                     Console.WriteLine($"Hello, you are to pay Ksh{tax_payable:C2}.Good day!!");
                     net_income(taxable_income, deduction, tax_payable);
+                    TaxComplianceDisplay(taxpayerName, taxpayerId, monthly_income, tax_payable, taxComplianceStatus);
+
                 }
             }
         }
@@ -294,7 +327,10 @@ while (On)
             CalculationWait();
             Console.WriteLine($"Hello, you are to pay Ksh{tax_payable:C2}");
             net_income(taxable_income, deduction, tax_payable);
+            TaxComplianceDisplay(taxpayerName, taxpayerId, monthly_income, tax_payable, taxComplianceStatus);
+
         }
+
 
         On = false;
 
@@ -310,62 +346,83 @@ while (On)
         string try_again_1 = prompt_1;
         string try_again_2 = promt_2;
 
-        
+
         Console.Write(try_again + prompt_1 + promt_2);
 
     }
 }
+
 Console.ReadKey();
 
 
 
 
 
-    static void Welcome()
+static void Welcome()
+{
+    Console.WriteLine("\v\t");
+    for (int i = 0; i < 100; i++)
     {
-        Console.WriteLine("\v\t");
-        for (int i = 0; i < 100; i++)
-        {
-            Console.Write("*");
-        }
-
-        Console.WriteLine("\v\v\t\t\t\tWELCOME TO CODE_X TAX CALCULATOR!!\v");
-
-        for (int i = 0; i < 100; i++)
-        {
-            Console.Write("*");
-        }
-        Console.WriteLine("\v");
-
-
+        Console.Write("*");
     }
 
+    Console.WriteLine("\v\v\t\t\t\tWELCOME TO CODE_X TAX CALCULATOR!!\v");
 
-    static void net_income(double Taxable_income, double Deduction, double Tax_payable)
+    for (int i = 0; i < 100; i++)
+    {
+        Console.Write("*");
+    }
+    Console.WriteLine("\v");
+
+
+}
+
+
+static void net_income(double Taxable_income, double Deduction, double Tax_payable)
 {
     double net_income = Taxable_income - (Deduction + Tax_payable);
 
     Console.WriteLine($"\v\tYour net income is Ksh{net_income}. Thankyou!!");
+    Thread.Sleep(3000);
 }
-    static void CalculationWait()
+static void CalculationWait()
+{
+    Random random = new Random();
+    int rand_delay = random.Next(50, 100);
+    int rand_int = random.Next(1, 4);
+    for (int i = 0; i < rand_int; i++)
     {
-        Random random = new Random();
-        int rand_delay = random.Next(50, 100);
-        int rand_int = random.Next(1, 4);
-        for (int i = 0; i < rand_int; i++)
-        {
-            Console.Write("\v\t$ Calculating Tax");
-            Thread.Sleep(rand_delay);
-            Console.Write(" .");
-            Thread.Sleep(rand_delay);
-            Console.Write(" .");
-            Thread.Sleep(rand_delay);
-            Console.Write(" .");
-            Thread.Sleep(rand_delay);
-            Console.Clear();
+        Console.Write("\v\t$ Calculating Tax");
+        Thread.Sleep(rand_delay);
+        Console.Write(" .");
+        Thread.Sleep(rand_delay);
+        Console.Write(" .");
+        Thread.Sleep(rand_delay);
+        Console.Write(" .");
+        Thread.Sleep(rand_delay);
+        Console.Clear();
 
 
 
-        }
     }
+}
 
+static void TaxComplianceDisplay(string TaxpayerName, string TaxpayerId, double Income, double TaxPaid, string TaxComplianceStatus)
+{
+
+
+    Console.Clear();
+    // Print the certificate
+    Console.WriteLine("\nCertificate of Tax Compliance\n");
+    Console.WriteLine("===================================");
+    Console.WriteLine($"Taxpayer Name: {TaxpayerName}");
+    Console.WriteLine($"Taxpayer ID: {TaxpayerId}");
+    Console.WriteLine($"Taxable Income: ${Income:N2}");
+    Console.WriteLine($"Total Tax Paid: ${TaxPaid:N2}");
+    Console.WriteLine("===================================");
+    Console.WriteLine($"Tax Compliance Status: {TaxComplianceStatus}");
+    Console.WriteLine("===================================");
+
+    Console.ReadKey();
+
+}
