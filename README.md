@@ -79,4 +79,32 @@ This project is licensed under the [MIT License](LICENSE).
 
 We extend our sincere appreciation to the developers ( karisacodes,s1gm9,WacoderForever) and contributors (G-CoderX, Stephanie Makori, Voste254, Nyabs254, 123Origami) who have generously contributed to enhancing this tax calculator.
 
+- **karisacodes**
+  - Lead Developer
 
+- **s1gm9**
+  - Project Maintainer
+
+- **WacoderForever**
+  - Solution Architecture
+
+- **magwach**
+  - Software Tester
+
+- **Halkano_Arero**
+  - Designer
+
+- **Voste254**
+  - Software Quality Assurance
+
+- **G-coderX**
+  - User interface Design
+
+- **Stephanie Makori**
+  - User Experience Design
+
+- **123Origami**
+  - Product Manager
+
+- **nyabs254**
+  - Scrum Master
