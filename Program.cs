@@ -423,5 +423,6 @@ static void TaxComplianceDisplay(string TaxpayerName, string TaxpayerId, double 
     Console.WriteLine("===================================");
 
     Console.ReadKey();
+    Console.Beep();
 
 }
