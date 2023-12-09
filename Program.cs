@@ -1,6 +1,7 @@
 ﻿
 
-// MY VARIABLES
+// Declaration of variables
+// assigning tax values
 
 
 using System.Data;
@@ -56,9 +57,7 @@ string taxpayerId = Console.ReadLine();
 Console.Clear();
 Welcome();
 
-// USER INPUTS
-
-
+// Inputs
 //monthly salary - check
 
 string prompt_1 = "\vEnter your monthly salary:";
@@ -412,7 +411,7 @@ static void TaxComplianceDisplay(string TaxpayerName, string TaxpayerId, double 
 
 
     Console.Clear();
-    // Print the certificate
+    // Printing tax certificate
     Console.WriteLine("\nCertificate of Tax Compliance\n");
     Console.WriteLine("===================================");
     Console.WriteLine($"Taxpayer Name: {TaxpayerName}");
